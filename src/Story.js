@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Wrapper,
   HeaderWrapper,
   RankContainer,
   Title,
@@ -16,7 +17,7 @@ class StoryList extends React.Component {
     });
 
     return (
-      <div style={{margin: "20px"}}>
+      <div>
         {stories}
       </div>
     );
@@ -28,7 +29,7 @@ class Story extends React.Component {
       const story = this.props.story;
 
       return (
-      <div className="story">
+      <Wrapper>
         <Header 
           index={this.props.index}
           title={story.title}
@@ -39,7 +40,7 @@ class Story extends React.Component {
           author={story.author}
           timestamp={story.created_at_i}
         />
-      </div>
+      </Wrapper>
       );
     }
 }
